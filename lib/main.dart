@@ -24,5 +24,16 @@ class Home extends StatelessWidget {
           separatorBuilder: (context, index) => SizedBox(height: 20.0),
           itemCount: 20,
         ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            showModalBottomSheet(
+              context: context,
+              builder: (ctx) => new Center(
+                child: Text('Borders still on the screen'),
+              ),
+            );
+          },
+          child: Text('TAP'),
+        ),
       );
 }
